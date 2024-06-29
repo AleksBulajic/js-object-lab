@@ -49,7 +49,7 @@ const starterPokemon = pokemon.find((p) => p.starter === true);
 // 2. Add this Pokémon to the `game.party` array using the push method.
 game.party.push(starterPokemon);
 
-console.log("EXERCISE 1",game.party);
+console.log("EXERCISE 1", game.party);
 
 /*
 Exercise 5
@@ -105,7 +105,6 @@ game.party.splice(0, 1, evolvedPokemon); // Replace the first element (index 0) 
 console.log("After evolving starter Pokémon:");
 console.log(game.party);
 
-
 /*
 Exercise 8
 1. Print the name of each Pokémon in your party.
@@ -118,8 +117,8 @@ Solve Exercise 8 here:
 // game.party.forEach(pokemon => {
 //     console.log(pokemon.name); // Assuming each pokemon object has a 'name' property
 //   });
-  
-console.log("RIGHT HEREEEEEEEE",game.party)
+
+console.log("RIGHT HEREEEEEEEE", game.party);
 /*
 Exercise 9
 1. Can you print out all the starter Pokémon from the `pokemon` array?
@@ -283,3 +282,70 @@ Solve Exercise 16 here:
 
 console.log("Final game object:");
 console.log(game);
+
+
+/*
+
+IN CLASS PROBELM 
+
+*/ 
+
+// Define the initial music object
+const music = {
+    currentTrack: 'Just Ken',
+    trackIdx: 0,
+    currentPlaylist: [
+      'Just Ken',
+      'Hey Blondie',
+      'What Was I Made For',
+      'Dance The Night'
+    ],
+    volume: 70,
+    
+    // Define a method to mute the volume
+    mute() {
+      this.volume = 0;
+    },
+    
+    // Define a method to play the next track
+    next() {
+      this.trackIdx++;
+      this.currentTrack = this.currentPlaylist[this.trackIdx];
+    }
+  };
+  
+  // Convert the currentPlaylist array to an array of objects
+  music.currentPlaylist = [
+    {
+      title: 'Just Ken',
+      artist: 'Ryan Gosling',
+      album: 'Barbie The Album',
+      length: '3:43'
+    },
+    {
+      title: 'Hey Blondie',
+      artist: 'Dominic Fike',
+      album: 'Barbie The Album',
+      length: '2:21'
+    },
+    {
+      title: 'What Was I Made For',
+      artist: 'Billie Eilish',
+      album: 'Barbie The Album',
+      length: '3:42'
+    },
+    {
+      title: 'Dance The Night',
+      artist: 'Dua Lipa',
+      album: 'Barbie The Album',
+      length: '2:56'
+    }
+  ];
+  
+  // Access and update the length of the song 'What Was I Made For'
+  music.currentPlaylist[2].length = '3:54';
+  
+  // Print the updated song object to verify the change
+  console.log(music.currentPlaylist[2]);
+  console.log(music.currentPlaylist[2].length); // Output: '3:54'
+  
