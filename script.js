@@ -59,13 +59,13 @@ Exercise 5
 
 Solve Exercise 5 here:
 */
-const typeSelectedPokemon = pokemon
-  .filter((p) => p.type === "grass")
-  .slice(0, 3);
+// const typeSelectedPokemon = pokemon
+//   .filter((p) => p.type === "grass")
+//   .slice(0, 3);
 
-game.party.push(...typeSelectedPokemon);
+// game.party.push(...typeSelectedPokemon);
 
-console.log("EXERCISE 2", game.party);
+// console.log("EXERCISE 2", game.party);
 
 
 
