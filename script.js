@@ -67,6 +67,17 @@ game.party.push(...typeSelectedPokemon);
 
 console.log("EXERCISE 2", game.party);
 
+
+
+let count = 0;
+pokemon.forEach((p) => {
+  if (p.type === "grass" && count < 3) {
+    game.party.push(p);
+    count++;
+  }
+});
+
+console.log("EXERCISE 2", game.party);
 /*
 Exercise 6
 1. Set the `completed` property to true for gyms with a difficulty below 3.
@@ -103,7 +114,7 @@ Solve Exercise 7 here:
 const evolvedPokemon = pokemon.find((p) => p.number === 2); // Assuming Bulbasaur evolves into Ivysaur
 game.party.splice(0, 1, evolvedPokemon); // Replace the first element (index 0) with the evolved Pokémon
 console.log("After evolving starter Pokémon:");
-console.log(game.party);
+console.log("EXERCISE 7",game.party);
 
 /*
 Exercise 8
