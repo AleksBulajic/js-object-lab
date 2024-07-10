@@ -69,6 +69,7 @@ Solve Exercise 5 here:
 
 
 
+
 let count = 0;
 pokemon.forEach((p) => {
   if (p.type === "grass" && count < 3) {
